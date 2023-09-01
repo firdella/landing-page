@@ -575,33 +575,6 @@
     color: var(--primary);
 }
 
-/*** Product ***/
-/* Reset some default styles */
-#product body, h1, p, img {
-    margin: 0;
-    padding: 0;
-}
-
-.product-image-group {
-    display: flex;
-    align-items: flex-start;
-}
-
-.product-row {
-    display: flex;
-    flex-direction: column;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    margin: 5px;
-}
-
-.product-text {
-    margin-left: 20px;
-}
-
   /* Add additional styling as needed */
 /*** Carousel Product ***/
 
