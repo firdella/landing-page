@@ -810,14 +810,14 @@
     align-items: flex-start;
 }
 
-h2 {
+.office h2 {
     color: #333;
-    border-bottom: 1.5px solid #333;
+    /* border-bottom: 1.5px solid #333; */
 }
 
 .address {
     line-height: 1.6;
-    border-right: 1px solid #333; /* Menambahkan garis di sebelah kanan */
+    border-right: 1px solid #ffffff; /* Menambahkan garis di sebelah kanan */
     padding-right: 20px; /* Menambahkan ruang di sebelah kanan */
     margin-right: 20px; /* Memberikan margin kanan */
 }
