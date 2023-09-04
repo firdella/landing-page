@@ -575,22 +575,18 @@
     color: var(--primary);
 }
 
+/*** Product ***/
+/* Reset some default styles */
   /* Add additional styling as needed */
 /*** Carousel Product ***/
 
 /*** Slider License ***/
-body slider {
+.body-slider {
 	align-items: center;
 	background: #E3E3E3;
 	display: flex;
 	height: 100vh;
 	justify-content: center;
-}
-
-
-@keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7));}
 }
 
 .slider {
@@ -601,30 +597,9 @@ body slider {
 	overflow:hidden;
 	position: relative;
 	width: 960px;
-    animation: slide 2s linear 1s infinite alternate;
-
-	&::before,
-	&::after {
-		content: "";
-		height: 100px;
-		position: absolute;
-		width: 200px;
-		z-index: 2;
-	}
-
-	&::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	}
-
-	&::before {
-		left: 0;
-		top: 0;
-	}
-
+}
 	.slide-track {
-		animation: scroll slide 2s linear 1s infinite alternate;
+		animation: scroll linear infinite;
 		display: flex;
 		width: calc(250px * 14);
 	}
@@ -633,7 +608,7 @@ body slider {
 		height: 100px;
 		width: 250px;
 	}
-}
+
 
 /*** Information Box ***/
 .box {
@@ -804,4 +779,20 @@ body slider {
     text-indent: 0px !important;
     text-align: start !important;
     text-align-last: start !important;
+}
+
+/** Whatsapp Button **/
+.whatsapp-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.whatsapp-button img{
+    width: 40px;
+    height: 40px;
 }
