@@ -579,42 +579,19 @@
     color: var(--primary);
 }
 
-/*** Product ***/
-/* Reset some default styles */
-  /* Add additional styling as needed */
-/*** Carousel Product ***/
-
-/*** Slider License ***/
-.body-slider {
-	align-items: center;
-	background: #E3E3E3;
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-}
-
-.slider {
-	background: white;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+/*** Information Box ***/
+.wrapper-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
 	height: 100px;
 	margin: auto;
-	overflow:hidden;
 	position: relative;
-	width: 960px;
+	width: 800px;
 }
-	.slide-track {
-		animation: scroll linear infinite;
-		display: flex;
-		width: calc(250px * 14);
-	}
 
-	.slide {
-		height: 100px;
-		width: 250px;
-	}
-
-
-/*** Information Box ***/
 .box {
     margin-top: 45px;
     display: -webkit-box;
