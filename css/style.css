@@ -24,7 +24,11 @@
     bottom: 45px;
     z-index: 99;
 }
-
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*** Spinner ***/
 #spinner {
@@ -664,6 +668,29 @@
     font-size: 22px;
 }
 
+/** Image Gallery **/
+.image-gallery{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-gallery img{
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    object-position: bottom;
+    padding: 5px;
+}
+
+.image-gallery img:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5;
+}
+
 /** Information Page Content Blog **/
 .section-padding{
     padding: 70px 0;
@@ -781,6 +808,32 @@
     text-align-last: start !important;
 }
 
+/** Button Hover **/
+.button-icon{
+    display: flex;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(100%, 100%);
+    margin: -50px 0 25px 0;
+    background: #32C36C;
+    color: #ffffff;
+    border-radius: 100px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    transition: .5s;
+}
+
+.button i {
+    font-size: 24px; /* Ukuran font ikon */
+    color: #000; /* Warna ikon */
+}
+
+
 /** Whatsapp Button **/
 .whatsapp-button{
     position: fixed;
@@ -828,4 +881,93 @@
 
 .contact-info p {
     margin: 5px 0;
+}
+
+/** Carousel Customers **/
+.customer-carousel::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.customer-carousel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .customer-carousel::before,
+    .customer-carousel::after {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .customer-carousel::before,
+    .customer-carousel::after {
+        width: 300px;
+    }
+}
+
+.customer-carousel .owl-nav{
+    position: absolute;
+    width: 350px;
+    top: 100px;
+    display: flex;
+    align-items: stretch;
+    opacity: 0;
+    transition: .5s;
+    z-index: 1;
+}
+
+.customer-carousel .owl-prev {
+    left: 50%; /* Menggeser nav kiri ke ujung kiri */
+    transform: translateX(-50%);
+}
+
+.customer-carousel .owl-next {
+    right: -80%;/* Menggeser nav kanan ke ujung kanan */
+    transform: translateX(50%);
+}
+
+
+.customer-carousel:hover .owl-nav {
+    width: 300px;
+    opacity: 1;
+}
+
+.customer-carousel .owl-nav .owl-prev,
+.customer-carousel .owl-nav .owl-next {
+    position: relative;
+    color: transparent;
+    font-size: 45px;
+    transition: .5s;
+}
+
+.customer-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    color: transparent;
+}
+
+.customer-carousel .customer-img img {
+    width: 100px;
+    height: 100px;
+}
+
+.customer-carousel .customer-img{
+    position: absolute;
+    bottom: -19px;
+    left: 50%;
+    transform: translateX(-50%);
 }
